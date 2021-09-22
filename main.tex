@@ -33,7 +33,7 @@
 	\vspace{25pt} % Whitespace
 	\rule{\linewidth}{0.5pt}\\ % Thin top horizontal rule
 	\vspace{20pt} % Whitespace
-	{\huge Experiment 2:Find g using your phone as a simple pendulum – using the “pendulum” option in the PhyPhox app.}\\ % The assignment title
+	{\huge Experiment 2: Experiments with simple and double pendulums with phase portraits}\\ % The assignment title
 	\vspace{12pt} % Whitespace
 	\rule{\linewidth}{2pt}\\ % Thick bottom horizontal rule
 	\vspace{12pt} % Whitespace
@@ -70,12 +70,16 @@
 
 %------------------------------------------------
 \section{Aim of Experiment}
-Find g using your phone as a simple pendulum – using the “pendulum” option in the PhyPhox app. \par
+1. Find g using your phone as a simple pendulum. \par
+2. Showing phase portraits and plotting time series for single and double pendulums.\par
+3. Calculate percentage dissipation of energy is presence of drag. \par
 
 \section{Apparatus required for the Experiment}
 \begin{enumerate}
 	\item A string
-	\item Phyphox mobile app
+	\item Phyphox app
+	\item Mobile phone or any solid object
+	\item Simulation enviornment (https://www.myphysicslab.com/)
 \end{enumerate}
 
 
@@ -88,106 +92,54 @@ Find g using your phone as a simple pendulum – using the “pendulum” option
 
 %------------------------------------------------
 \section{Theory}
-Every experiment uses some or the other instrument to make several measurements, and none of them is perfect. Every instrument has some error associated with it. These errors can be broadly classified into two types, namely systematic errors and random errors.\par 
-\textbf{Systematic errors}: - The errors are caused due to imperfect measurement techniques or imperfect apparatus. \\
-\textbf{Random errors}: - The errors in measurement are caused by factors that from one measurement to another. \par 
 
-Since obliterating these errors is impossible in real-life scenarios. Hence we need to measure how accurate our obtained result is, precisely what we do in error analysis. For doing error analysis, we first need to comprehend the two critical definitions, which are as mentioned below: - \par 
 
-\textbf{A) Accuracy}: - The closeness of the result (or the practical values) to the theoretically calculated values is represented by this quantity. The more accurate our experiment is, the closer is the practical value to the theoretical value.\par
+\subsection{Acceleration Due to Gravity for Single Pendulum(g)}
 
-\textbf{B) Precision}: - Precision represents the closeness of the different results obtained by repeating the same experiments in the same situation along with the same apparatus. \par
-
-\subsection{Acceleration Due to Gravity(g)}
-
-As we know from Newton’s motion of equations, that if an object is dropped (i.e., initial velocity =0) from some height ‘h’ (such that h is negligibly small compared to the radius of the earth), then  \par
+We will use Phyphox app and our mobile as a solid object tied with a string and hung like a pendulum and g shown shall be reported. Instead of mobile, we can also use any solid object (such as a stone etc.). In this case, we will note down the time period of our oscillation and the length of the string. Thereafter, to calculate g we will use a well known relation between time period of simple pendulum and g: \par
 
 \begin{align} 
 	\begin{split}
-		h &= \frac{1}{2}gt^2\\
+		T = 2\pi\sqrt{\frac{L}{g}}\\
 	\end{split}					
 \end{align}
 
-where g = acceleration due to gravity and t= time taken for the object to reach the ground. \par
-
-\subsubsection{Procedure (for calculating g)}
-For finding g, we follow the below-mentioned steps: - \par
-
-A) Select a random number ‘n’ such that the ball will be able to bounce at least n number of times. Also, select a height H (which will be constant throughout the experiment)\par
-
-B) Drop the ball from H height, record the total time it takes to do n bounces, and name it $T_n^*$. \par
-
-C) Fill the below mentioned observation table and use the formula mentioned below to use the previously fetched e and the respective H and $T_n^*$ to calculate g. \par
+Rearranging the terms, we get:
 \begin{align} 
 	\begin{split}
-		g &= \frac{8He}{t_{n}^{*2}}\left(\dfrac{(\sqrt{e})^n-1}{\sqrt{e}-1}\right)^2\\
+		g = \frac{4\pi^2L}{T^2}\\
 	\end{split}					
 \end{align}
-	 
-D) The final value of g will be the avg of all the g’s obtained in the experiment. \par
 
-\subsubsection{Errors(for g)}
-The equation deduced after error analysis on the above equation is:(Assuming n=3)\par
-\textbf{Least count for heights h and H = 0.01 m and for time = 0.001 s.}\par
+where\\ g = acceleration due to gravity.\\ T= Time period of simple pendulum.\\ L= Length of string. \par
 
-Derivation for the Error Propagation:
-\begin{align} 
-		g &= \frac{8He}{t_{n}^{*2}}\left(\dfrac{(\sqrt{e})^n-1}{\sqrt{e}-1}\right)^2 \nonumber
-\end{align}
-    Taking logarithmic on both sides and taking n = 3:
-\begin{align} 
-            \log_e g &= \log_e H + \log_e t^{-2} + 2(log_e ({e^{3/2}-1}) - log_e ({\sqrt{e}-1})) \nonumber
-\end{align}
-    Differentiating on both sides we get:
-\begin{align} 
-        \frac{\partial{g}}{g} &= \frac{\partial{H}}{H} + \frac{\partial{e}}{e} + \frac{2\partial{t_n^*}}{t_n^*} + \left|\frac{3\partial{e^{3/2-1}}}{\sqrt{e}-1} + \frac{\partial{e^{-1/2}}}{\sqrt{e}-1}\right|\partial{e} \nonumber
-\end{align}
-   On further solving the above equation we get:
-\begin{align} 
-	\begin{split}
-		\frac{\partial{g}}{g} &= \frac{\partial{H}}{H} + \frac{\partial{e}}{e}+\frac{2\partial{t_m^*}}{t_m^*}+\left|\frac{3\sqrt{e}\partial{e}}{e^{3/2}-1}\right|+\left|\frac{\partial{e}}{\sqrt{e}(\sqrt{e}-1)}\right|\\
-	\end{split}					
-\end{align}
 %------------------------------------------------
 
-\subsection{Coefficient of Restitution(e)}
-From the definition of the coefficient of restitution we know, 
+\subsection{Phase Portraits}
+Phase portrait is the graph between..... $\theta$ For simple pendulum with small amplitude(i.e. $\sin\theta \approx \theta$), phase portrait is generally an ellipse in an ideal case. In the presence of viscous forces such as drag etc. then we observe phase portrait as concentric ellipses. \par
+In this case we can quantify energy lost per cycle in terms of decrease in area of 2 consecutive concentric ellipses (percentage decrease).
+
+Formula for the \textbf{area(A)} of the ellipse with major axis as \textbf{a} and minor axis as \textbf{b} is:
 \begin{align} 
 	\begin{split}
-		e &= \frac{h}{H}\\
+		A = \pi ab\\
 	\end{split}					
 \end{align}
+
+\subsubsection{Liouville's Theorem}
+For Non-Dissipative systems, average phase space traversed is conserved.
 
 %------------------------------------------------
-\subsubsection{Procedure (for calculating e)}
-For finding e, we follow the below-mentioned steps: - \par
+\subsection{Time Series}
+Time Series is the graph between .... For non-dissipative systems, amplitude remains constant throughout and no energy is lost whereas for dissipative systems, amplitude keeps on decreasing with time and energy also decreases along.
 
-A) Release the ball from some height ‘H’ and note it in the observation table. \par
+\subsection{Double Pendulum}
+Lagrangian equation for double pendulum is as follows:
 
-B) Record the height to which the ball rises after the first collision (let it be ‘h’) and note it in the observation table. \par
+%-----------------MAYANK CHADHA WRITE ALL EQUATIONS HERE_______________________%
 
-C) Calculate e by using the equation mentioned beforehand. \par
 
-D) Repeat the above steps several times to get a good idea about the actual e and fill the observation table accordingly. \par
 
-E) Calculate the average of all the e’s calculated in the above steps. This e is the coefficient of restitution of the ball. \par
-
-\subsubsection{Errors(for e)}
-The equation deduced after error analysis on the above equation is:\par
-Derivation for the Error Propagation:
-\begin{align} 
-		e &= \frac{h}{H} \nonumber
-\end{align}
-Taking log both sides :
-\begin{align}
-\log_e e &= \log_e h - \log_e H \nonumber
-\end{align}
-   Finally we get:
-\begin{align} 
-	\begin{split}
-		\frac{\partial{e}}{e} &= \frac{\partial{H}}{H} + \frac{\partial{h}}{h}\\
-	\end{split}					
-\end{align}
 
 \section{Sources of Error}
 \begin{enumerate}
