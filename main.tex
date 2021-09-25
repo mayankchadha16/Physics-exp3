@@ -135,7 +135,27 @@ Time Series is the graph between... For non-dissipative systems, the amplitude r
 
 \subsection{Double Pendulum}
 Lagrangian equation for double pendulum is as follows:
+\begin{equation}
+\left(m_{1}+m_{2}\right) L_{1}^{2} \theta_{1}^{\prime \prime}+m_{2} L_{1} L_{2} \theta_{2}^{\prime \prime} \cos \left(\theta_{1}-\theta_{2}\right)+m_{2} L_{1} L_{2} \theta_{1}^{\prime} \theta_{2}^{\prime} \sin \left(\theta_{1}-\theta_{2}\right)+g L_{1} \sin \theta_{1}\left(m_{1}+m_{2}\right)=0
+\end{equation}
+and
+\begin{equation}
+m_{2} L_{2}^{2} \theta_{2}^{\prime \prime}+m_{2} L_{1} L_{2} \theta_{1}^{\prime \prime} \cos \left(\theta_{1}-\theta_{2}\right)-m_{2} L_{4} L_{2} \theta_{1}^{\prime 2} \sin \left(\theta_{1}-\theta_{2}\right)+g m_{2} L_{2} \sin \theta_{2}=0
+\end{equation}
+\\
+After Nondimensionalization, i.e substituting in the above equations as follows:
+\begin{equation*}
+M=\frac{m_{2}}{m_{1}+m_{2}} \hspace{1cm} \mbox{and} \hspace{1cm} L=\frac{l_{2}}{l_{1}}
+\end{equation*}
 
+We get:
+\begin{equation}
+\theta_{1}^{\prime \prime}+M L \theta_{2}^{\prime \prime} \cos \left(\theta_{1}-\theta_{2}\right)+M L \theta_{1}^{\prime} \theta_{2}^{\prime} \sin \left(\theta_{1}-\theta_{2}\right)+\omega^{2} \sin \theta_{1}=0
+\end{equation}
+and
+\begin{equation}
+L \theta_{2}^{\prime \prime}+\theta_{1}^{\prime \prime} \cos \left(\theta_{1}-\theta_{2}\right)-\theta_{1}^{\prime 2} \sin \left(\theta_{1}-\theta_{2}\right)+\omega^{2} \sin \theta_{2}=0
+\end{equation}
 %-----------------MAYANK CHADHA WRITE ALL EQUATIONS HERE_______________________%
 
 
@@ -187,7 +207,7 @@ The plot for phase portrait for all of them is shown below:
 
 \begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
 	\centering
-	\includegraphics[width=\textwidth, height=15cm]{Figures/M 2a.png} % Example image
+	\includegraphics[width=\textwidth, height=10cm]{Figures/M 2a.png} % Example image
 	\caption{Phase portrait for amplitude 1.5, 1 and 0.75.}
 \end{figure}
 
