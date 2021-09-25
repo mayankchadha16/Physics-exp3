@@ -116,8 +116,8 @@ where\\ g = acceleration due to gravity.\\ T= Time period of simple pendulum.\\ 
 %------------------------------------------------
 
 \subsection{Phase Portraits}
-Phase portrait is the graph between..... $\theta$ For a simple pendulum with small amplitude(i.e. $\sin\theta \approx \theta$), phase portrait is generally an ellipse in an ideal case. In the presence of viscous forces such as drag, then we observe phase portrait as concentric ellipses. \par
-In this case, we can quantify energy lost per cycle in the decrease in the area of 2 consecutive concentric ellipses (percentage decrease).
+Phase portrait is the graph between..... $\theta$ For a simple pendulum with small amplitude(i.e. $\sin\theta \approx \theta$), phase portrait is generally an \textbf{ellipse} in an ideal case. As we increase the amplitude of the pendulum ($\theta$), we will observe the increase in length of both major and minor axis of the ellipse. \\
+In the presence of viscous forces such as drag, then we observe phase portrait as concentric ellipses. In this case, we can quantify energy lost per cycle in the decrease in the area of 2 consecutive concentric ellipses (percentage decrease).
 
 Formula for the \textbf{area(A)} of the ellipse with major axis as \textbf{a} and minor axis as \textbf{b} is:
 \begin{align} 
@@ -179,7 +179,7 @@ Lagrangian equation for double pendulum is as follows:
 \end{table}
 So the final $h_{avg}$ = 1.05 m\\
 So the final $e_{avg}$ = 0.52\\
-So the error in e calculated using the equation above is \partial{e} = 0.008 
+So the error in e calculated using the equation above is $\partial{e}$ = 0.008 
 
 \begin{table}[h]
 \centering
@@ -211,249 +211,193 @@ So the error in g calculated using the equation above is \partial{g} = 0.872  $m
 \newpage
 \subsection{Anshul Jindal(IMT2020039)}
 
-\begin{table}[h] % [h] forces the table to be output where it is defined in the code (it suppresses floating)
-	\centering % Centre the table
-	\begin{tabular}{l l l}
-		\toprule
-		\textbf{H} & \textbf{h} & \textbf{e} \\
-		\midrule
-		1.60 m & 0.84 m & 0.52\\
-        1.60 m & 0.86 m & 0.54\\
-        1.60 m & 0.84 m & 0.53\\
-        1.60 m & 0.82 m & 0.51 \\
-        1.60 m & 0.84 m & 0.53 \\
-		\bottomrule
-	\end{tabular}
-	\caption{Observation Table for e}
-\end{table}
-So the final $h_{avg}$ = 0.84 m\\
-So the final $e_{avg}$ = 0.53\\
-So the error in e calculated using the equation above is \partial{e} = 0.0096 
+\textbf{1}.
+Acceleration due to gravity (g) as reported by phyphox by using phone as a simple pendulum is = ...$m/s^2$\\
 
-\begin{table}[h]
-\centering
-\begin{tabular}{||c c c c c c||} 
-\toprule
- \hline
- H & t_0 & t_1 & t_2 & t_n^* & g \\ [0.5ex] 
- \midrule
- \hline\hline
- 1.6 m & 0.786 s & 0.597 s  & 0.435 s & 1.818 s & 10.29 $m/s^2$ \\
- \hline
- 1.6 m & 0.802 s & 0.579 s & 0.466 s & 1.847 s & 10.40 $m/s^2$  \\
- \hline
- 1.6 m & 0.812 s & 0.606 s & 0.413 s & 1.831 s  & 10.14 $m/s^2$ \\
- \hline
- 1.6 m & 0.831 s & 0.585 s & 0.392 s & 1.808 s  & 9.96 $m/s^2$  \\
- \hline
- 1.6 m & 0.791 s & 0.572 s & 0.461 s & 1.824 s  & 10.22 $m/s^2$ \\ [1ex]
- \bottomrule
- \hline
-\end{tabular}
-\caption{Observation Table for g}
-\end{table}
-Phyphox absolute value of g = 9.82 $m/s^2$\\
-So the final $t_n^*_{avg}$ = 1.8256 s\\
-So the final $g_{avg}$ = 10.20 $m/s^2$\\
-So the error in g calculated using the equation above is \partial{g} = 1.105  $m/s^2$\\
+\textbf{2a}.
+Phase portrait of a simple pendulum without dissipation is an ellipse.\\
+Three different values of the amplitude($\theta$) taken by me is: 0.8, 0.4 and 0.2\\
+
+The plot for phase portrait for all of them is shown below:
+
+\begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
+	\centering
+	\includegraphics[width=\textwidth, height=15cm]{2a.PNG} % Example image
+	\caption{Phase portrait for amplitude 0.8, 0.4 and 0.2 .}
+\end{figure}
 
 \newpage
-\subsection{Rahul Jain(IMT2020117)}
+\textbf{2b}.
+Phase Portrait of the desired experiment is:
+\begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
+	\centering
+	\includegraphics[width=12cm, height=8cm]{Anshul_2b.PNG} % Example image
+	\caption {Representative phase portrait for your smartphone-pendulum}
+\end{figure}
 
-\begin{table}[h] % [h] forces the table to be output where it is defined in the code (it suppresses floating)
-	\centering % Centre the table
-	\begin{tabular}{l l l}
-		\toprule
-		\textbf{H} & \textbf{h} & \textbf{e} \\
-		\midrule
-		1.75 m & 0.83 m & 0.47\\
-        1.75 m & 0.87 m  & 0.48\\
-        1.75 m & 0.83 m  & 0.47\\
-        1.75 m & 0.86 m & 0.49 \\
-        1.75 m & 0.84 m & 0.48 \\
-		\bottomrule
-	\end{tabular}
-	\caption{Observation Table for e}
-\end{table}
-So the final $h_{avg}$ = 0.85 m\\
-So the final $e_{avg}$ = 0.48\\
-So the error in e calculated using the equation above is \partial{e} = 0.008
-
-\begin{table}[h]
-\centering
-\begin{tabular}{||c c c c c c||} 
-\toprule
- \hline
- H & t_0 & t_1 & t_2 & t_n^* & g \\ [0.5ex] 
- \midrule
- \hline\hline
-1.75 m & 0.651 s & 0.576 s  & 0.503 s & 1.730 s & 10.56 $m/s^2$  \\ 
- \hline
- 1.75 m & 0.710 s & 0.592 s & 0.464 s & 1.766 s & 10.603 $m/s^2$  \\
- \hline
- 1.75 m & 0.655 s & 0.540 s & 0.487 s & 1.682 s  & 10.98 $m/s^2$   \\
- \hline
- 1.75 m & 0.635 s & 0.605 s & 0.468 s & 1.708 s  & 10.88 $m/s^2$   \\
- \hline
- 1.75 m & 0.638 s & 0.565 s & 0.480 s & 1.683 s  & 10.97 $m/s^2$  \\ [1ex]
- \bottomrule
- \hline
-\end{tabular}
-\caption{Observation Table for g}
-\end{table}
-Phyphox absolute value of g = 9.76 $m/s^2$\\
-So the final $t_n^*_{avg}$ = 1.71 s\\
-So the final $g_{avg}$ = 10.80 $m/s^2$\\
-So the error in g calculated using the equation above is \partial{g} = 0.972 $m/s^2$ \\
+\\
+\textbf{2c}.
+Time series of the desired experiment is:
+\begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
+	\centering
+	\includegraphics[width=12cm, height=8cm]{Anshul_2c.PNG} % Example image
+	\caption {Representative Time series for your smartphone-pendulum ($\theta$ vs t)}
+\end{figure}
 
 \newpage
-\subsection{Karanjit Saha(IMT2020003)}
+\textbf{3}.
+Non-zero value for the drag chosen by me = 0.130 \\
+I got concentric ellipses. Phase portrait is shown below:
+\begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
+	\centering
+	\includegraphics[width=\textwidth, height=15cm]{3.PNG} % Example image
+	\caption{Phase portrait for simple pendulum in presence of drag.}
+\end{figure}
 
-\begin{table}[h] % [h] forces the table to be output where it is defined in the code (it suppresses floating)
-	\centering % Centre the table
-	\begin{tabular}{l l l}
-		\toprule
-		\textbf{H} & \textbf{h} & \textbf{e} \\
-		\midrule
-		2.00 m & 1.02 m & 0.51\\
-		2.00 m & 0.99 m  & 0.50\\
-		2.00 m & 0.98 m  & 0.49\\
-		2.00 m & 1.01 m & 0.50 \\
-		2.00 m & 1.00 m & 0.50 \\
-		\bottomrule
-	\end{tabular}
-	\caption{Observation Table for e}
-\end{table}
-So the final $h_{avg}$ = 1.00 m\\
-So the final $e_{avg}$ = 0.50\\
-So the error in e calculated using the equation above is \partial{e} = 0.001 
+\textbf{$1^{st}$ Ellipse - }\\
+length of major axis (a) = 2.54 units\\
+length of minor axis (b) = 0.87 units\\
 
-\begin{table}[h]
-\centering
-\begin{tabular}{||c c c c c c||} 
-\toprule
- \hline
- H & t_0 & t_1 & t_2 & t_n^* & g \\ [0.5ex] 
- \midrule
- \hline\hline
- 2.00 m & 0.917 s & 0.685 s  & 0.527 s & 2.129 s & 8.60 $m/s^2$  \\ 
- \hline
- 2.00 m & 0.889 s & 0.710 s & 0.535 s & 2.134 s & 8.56 $m/s^2$  \\
- \hline
- 2.00 m & 0.916 s & 0.681 s & 0.530 s & 2.127 s  & 8.61 $m/s^2$   \\
- \hline
- 2.00 m & 0.912 s & 0.700 s & 0.519 s & 2.131 s  & 8.58 $m/s^2$   \\
- \hline
- 2.00 m & 0.910 s & 0.690 s & 0.531 s & 2.131 s  & 8.58 $m/s^2$  \\ [1ex] 
- \bottomrule
- \hline
-\end{tabular}
-\caption{Observation Table for g}
-\end{table}
-Phyphox absolute value of g = 9.27 $m/s^2$\\
-So the final $t_n^*_{avg}$ = 2.130 s\\
-So the final $g_{avg}$ = 8.59 $m/s^2$\\
-So the error in g calculated using the equation above is \partial{g} = 0.702 $m/s^2$
+So area will be (A) = $\pi$ab \implies 2.54*0.87*$\pi$ \implies 2.21$\pi$ units\\
+
+\textbf{$2^{nd}$ Ellipse - }\\
+length of major axis (a) = 2.22 units\\
+length of minor axis (b) = 0.76 units\\
+
+So area will be (A) = $\pi$ab \implies 2.22*0.76*$\pi$ \implies 1.69$\pi$ units\\
+
+\textbf{$3^{rd}$ Ellipse - }\\
+length of major axis (a) = 1.95 units\\
+length of minor axis (b) = 0.66 units\\
+
+So area will be (A) = $\pi$ab \implies 1.95*0.66*$\pi$ \implies 1.29$\pi$ units\\
+
+\textbf{Quantifying Energy Lost:}\\
+Between Ellipse 1 and Ellipse 2:\\
+
+Area of ellipse 1 (A1) = 2.21$\pi$ units\\
+Area of ellipse 2 (A2) = 1.69$\pi$ units\\
+
+Now percentage decrease in area:
+\begin{equation*}
+\implies (\frac{A1-A2}{A1})*100
+\end{equation*}
+
+\begin{equation*}
+\implies (\frac{2.21\pi-1.69\pi}{2.21\pi})*100
+\end{equation*}
+
+\begin{equation*}
+\implies 23.53 \%
+\end{equation*}
+
+Between Ellipse 2 and Ellipse 3:\\
+
+Area of ellipse 2 (A2) = 1.69$\pi$ units\\
+Area of ellipse 3 (A3) = 1.29$\pi$ units\\
+
+Now percentage decrease in area:
+\begin{equation*}
+\implies (\frac{A2-A3}{A2})*100
+\end{equation*}
+
+\begin{equation*}
+\implies (\frac{1.69\pi-1.29\pi}{1.69\pi})*100
+\end{equation*}
+
+\begin{equation*}
+\implies 23.66 \%
+\end{equation*}
+
+\textbf{Observation:}
+The percentage decrease in area is almost equal for all the consecutive concentric ellipses.\\
+
+\textbf{4a}.
+I have taken \textbf{l1} and \textbf{l2} both equal to 0.836 units such that \textbf{L}=$\frac{l2}{l1}$ = 1 units\\
+
+The phase portraits and time series graphs are shown in next page.
+
+The value of \textbf{M} chosen by me is $\frac{1}{3}$ units for which I took \textbf{m1} as 2.00 units and \textbf{m2} as 1.00 units.\newpage
+
+\textbf{Phase Portrait:}\\
+Below shown is the phase portrait for the double pendulum w.r.t m1:
+\begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
+	\centering
+	\includegraphics[width=12cm, height=8cm]{4a_phase(1).PNG} % Example image
+	\caption{Phase portrait for double pendulum (d$\theta_{1}$/dt vs $\theta_{1}$)}
+\end{figure}
+\\
+Below shown is the phase portrait for the double pendulum w.r.t m2:
+\begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
+	\centering
+	\includegraphics[width=12cm, height=8cm]{4a_phase(2).PNG} % Example image
+	\caption{Phase portrait for double pendulum (d$\theta_{2}$/dt vs $\theta_{2}$)}
+\end{figure}
+\newpage
+\textbf{Time Series:}\\
+Below shown is the Time series for the double pendulum w.r.t m1:
+\begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
+	\centering
+	\includegraphics[width=12cm, height=8cm]{4a_time(1).PNG} % Example image
+	\caption{Time series for double pendulum ($\theta_{1}$ vs t)}
+\end{figure}
+
+Below shown is the Time series for the double pendulum w.r.t m2:
+\begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
+	\centering
+	\includegraphics[width=12cm, height=8cm]{4a_time(2).PNG} % Example image
+	\caption{Time series for double pendulum ($\theta_{2}$ vs t)}
+\end{figure}
+
 
 \newpage
-\subsection{Chinmay Parekh(IMT2020069)}
+\textbf{4b}.
+\textbf{M} is kept constant at 0.50 units by keeping \textbf{m1} = 1.00 units and \textbf{m2} = 1.00 units as well.\\
 
-\begin{table}[h] % [h] forces the table to be output where it is defined in the code (it suppresses floating)
-	\centering % Centre the table
-	\begin{tabular}{l l l}
-		\toprule
-		\textbf{H} & \textbf{h} & \textbf{e} \\
-		\midrule
-		2.00 m & 1.10 m & 0.55\\
-        2.00 m & 1.09 m  & 0.54\\
-        2.00 m & 1.08 m  & 0.54\\
-        2.00 m & 1.10 m & 0.55 \\
-        2.00 m & 1.06 m & 0.53 \\
-		\bottomrule
-	\end{tabular}
-	\caption{Observation Table for e}
-\end{table}
-So the final $h_{avg}$ = 1.09 m\\
-So the final $e_{avg}$ = 0.54\\
-So the error in e calculated using the equation above is \partial{e} = 0.007
+The value of \textbf{L} chosen by me is 0.800 units by keeping \textbf{l2} = 0.800 units and \textbf{l1} = 1.000 units
 
-\begin{table}[h]
-\centering
-\begin{tabular}{||c c c c c c||} 
-\toprule
- \hline
- H & t_0 & t_1 & t_2 & t_n^* & g \\ [0.5ex] 
- \midrule
- \hline\hline
- 2.00 m & 0.751 s & 0.698 s  & 0.648 s & 2.097 s & 10.51 $m/s^2$  \\ 
- \hline
- 2.00 m & 0.787 s & 0.605 s & 0.598 s & 1.989 s & 11.48 $m/s^2$  \\
- \hline
- 2.00 m & 0.753 s & 0.690 s & 0.604 s & 2.047 s  & 10.67 $m/s^2$   \\
- \hline
- 2.00 m & 0.762 s & 0.685 s & 0.623 s & 2.07 s  & 10.78 $m/s^2$   \\
- \hline
- 2.00 m & 0.771 s & 0.690 s & 0.611 s & 2.072 s  & 10.07 $m/s^2$  \\ [1ex]
- \bottomrule
- \hline
-\end{tabular}
-\caption{Observation Table for g}
-\end{table}
-Phyphox absolute value of g = 10.03 $m/s^2$\\
-So the final $t_n^*_{avg}$ = 2.055 s\\
-So the final $g_{avg}$ = 10.70 $m/s^2$\\
-So the error in g calculated using the equation above is \partial{g} = 0.935 $m/s^2$\\
-
+\textbf{Phase Portrait:}\\
+Below shown is the phase portrait for the double pendulum w.r.t m1:
+\begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
+	\centering
+	\includegraphics[width=12cm, height=8cm]{4b_phase(1).PNG} % Example image
+	\caption{Phase portrait for double pendulum (d$\theta_{1}$/dt vs $\theta_{1}$)}
+\end{figure}
+\\
+Below shown is the phase portrait for the double pendulum w.r.t m2:
+\begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
+	\centering
+	\includegraphics[width=12cm, height=8cm]{4b_phase(2).PNG} % Example image
+	\caption{Phase portrait for double pendulum (d$\theta_{2}$/dt vs $\theta_{2}$)}
+\end{figure}
 \newpage
-\subsection{Shashank Shekhar(IMT2020112)}
+\textbf{Time Series:}\\
+Below shown is the Time series for the double pendulum w.r.t m1:
+\begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
+	\centering
+	\includegraphics[width=12cm, height=8cm]{4b_time(1).PNG} % Example image
+	\caption{Time series for double pendulum ($\theta_{1}$ vs t)}
+\end{figure}
 
-\begin{table}[h] % [h] forces the table to be output where it is defined in the code (it suppresses floating)
-	\centering % Centre the table
-	\begin{tabular}{l l l}
-		\toprule
-		\textbf{H} & \textbf{h} & \textbf{e} \\
-		\midrule
-		2.00 m & 1.01 m & 0.50\\
-        2.00 m & 0.96 m  & 0.48\\
-        2.00 m & 0.98 m  & 0.49\\
-        2.00 m & 1.05 m & 0.52 \\
-        2.00 m & 0.99 m & 0.50 \\
-		\bottomrule
-	\end{tabular}
-	\caption{Observation Table for e}
-\end{table}
-So the final $h_{avg}$ = 0.99 m\\
-So the final $e_{avg}$ = 0.49\\
-So the error in e calculated using the equation above is \partial{e} = 0.001
+Below shown is the Time series for the double pendulum w.r.t m2:
+\begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
+	\centering
+	\includegraphics[width=12cm, height=8cm]{4b_time(2).PNG} % Example image
+	\caption{Time series for double pendulum ($\theta_{2}$ vs t)}
+\end{figure}
 
-\begin{table}[h]
-\centering
-\begin{tabular}{||c c c c c c||} 
-\toprule
- \hline
- H & t_0 & t_1 & t_2 & t_n^* & g \\ [0.5ex] 
- \midrule
- \hline\hline
- 2.00 m & 0.917 s & 0.687 s  & 0.525 s & 2.129 s & 8.57 $m/s^2$  \\ 
- \hline
- 2.00 m & 0.889 s & 0.667 s & 0.505 s & 2.061 s & 9.14 $m/s^2$  \\
- \hline 
- 2.00 m & 0.914 s & 0.656 s & 0.502 s & 2.072 s  & 9.04 $m/s^2$   \\
- \hline
- 2.00 m & 0.912 s & 0.702 s & 0.518 s & 2.132 s  & 8.54 $m/s^2$   \\
- \hline
- 2.00 m & 0.917 s & 0.688 s & 0.509 s & 2.114 s  & 8.68 $m/s^2$  \\ 
- [1ex]
- \bottomrule
- \hline
-\end{tabular}
-\caption{Observation Table for g}
-\end{table}
-Phyphox absolute value of g = 9.53 $m/s^2$\\
-So the final $t_n^*_{avg}$ = 2.102 s\\
-So the final $g_{avg}$ = 8.79 $m/s^2$\\
-So the error in g calculated using the equation above is \partial{g} = 0.009 $m/s^2$\\
 
-\newpage
+
+
+
+
+
+
+
+
+
+
+
+
 
 \end{document}
