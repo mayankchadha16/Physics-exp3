@@ -162,51 +162,175 @@ Lagrangian equation for double pendulum is as follows:
 \section{Observation and Calculation}
 \subsection{Mayank Chadha(IMT2020045)}
 
-\begin{table}[h] % [h] forces the table to be output where it is defined in the code (it suppresses floating)
-	\centering % Centre the table
-	\begin{tabular}{l l l}
-		\toprule
-		\textbf{H} & \textbf{h} & \textbf{e} \\
-		\midrule
-		2.00 m & 1.07 m & 0.53\\
-        2.00 m & 1.03 m & 0.51\\
-        2.00 m & 1.05 m & 0.52\\
-        2.00 m & 1.05 m & 0.52\\
-        2.00 m & 1.07 m & 0.53\\
-		\bottomrule
-	\end{tabular}
-	\caption{Observation Table for e}
-\end{table}
-So the final $h_{avg}$ = 1.05 m\\
-So the final $e_{avg}$ = 0.52\\
-So the error in e calculated using the equation above is $\partial{e}$ = 0.008 
+\textbf{2a}.
+Phase portrait of a simple pendulum without dissipation is an ellipse.\\
+Three different values of the amplitude($\theta$) taken by me is: 1.5, 1 and 0.75\\
 
-\begin{table}[h]
-\centering
-\begin{tabular}{||c c c c c c||} 
-\toprule
- \hline
- H & t_0 & t_1 & t_2 & t_n^* & g \\ [0.5ex] 
- \midrule
- \hline\hline
- 2.00 m & 0.924 s & 0.679 s  & 0.436 s & 2.039 s & 10.58 $m/s^2$  \\ 
- \hline
- 2.00 m & 0.891 s & 0.665 s & 0.448 s & 1.994 s & 10.33 $m/s^2$  \\
- \hline
- 2.00 m & 0.924 s & 0.669 s & 0.436 s & 2.029 s  & 10.32 $m/s^2$   \\
- \hline
- 2.00 m & 0.961 s & 0.682 s & 0.411 s & 2.054 s  & 10.08 $m/s^2$   \\
- \hline
- 2.00 m & 0.940 s & 0.696 s & 0.412 s & 2.048 s  & 10.48 $m/s^2$  \\ [1ex]
- \bottomrule
- \hline
-\end{tabular}
-\caption{Observation Table for g}
-\end{table}
-Phyphox absolute value of g = 9.98 $m/s^2$ \\
-So the final $t_n^*_{avg}$ = 2.0328 s\\
-So the final $g_{avg}$ = 10.36 $m/s^2$\\
-So the error in g calculated using the equation above is \partial{g} = 0.872  $m/s^2$\\
+The plot for phase portrait for all of them is shown below:
+
+\begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
+	\centering
+	\includegraphics[width=\textwidth, height=15cm]{Figures/M 2a.png} % Example image
+	\caption{Phase portrait for amplitude 1.5, 1 and 0.75.}
+\end{figure}
+
+\newpage
+\textbf{2b}.
+Phase Portrait of the desired experiment is:
+\begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
+	\centering
+	\includegraphics[width=12cm, height=8cm]{Figures/M 2b.png} % Example image
+	\caption {Representative phase portrait for your smartphone-pendulum}
+\end{figure}
+
+\textbf{2c}.
+Time series of the desired experiment is:
+\begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
+	\centering
+	\includegraphics[width=12cm, height=8cm]{Figures/M 2c.png} % Example image
+	\caption {Representative Time series for your smartphone-pendulum ($\theta$ vs t)}
+\end{figure}
+
+\newpage
+\textbf{3}.
+Non-zero value for the drag chosen by me = 1.870 \\
+I got concentric ellipses. Phase portrait is shown below:
+\begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
+	\centering
+	\includegraphics[width=\textwidth, height=15cm]{Figures/M3.png} % Example image
+	\caption{Phase portrait for simple pendulum in presence of drag.}
+\end{figure}
+
+\textbf{$1^{st}$ Ellipse - }\\
+length of major axis (a) = 2.42  units\\
+length of minor axis (b) = 0.99 units\\
+
+So area will be (A) = $\pi$ab \implies 2.42*0.99*$\pi$ \implies 2.39$\pi$ units\\
+\textbf{$2^{nd}$ Ellipse - }\\
+length of major axis (a) = 2.19 units\\
+length of minor axis (b) = 0.89 units\\
+
+So area will be (A) = $\pi$ab \implies 2.19*0.89*$\pi$ \implies 1.94$\pi$ units\\
+
+\textbf{$3^{rd}$ Ellipse - }\\
+length of major axis (a) = 2.09 units\\
+length of minor axis (b) = 0.76 units\\
+
+So area will be (A) = $\pi$ab \implies 2.09*0.72*$\pi$ \implies 1.52$\pi$ units\\
+
+\textbf{Quantifying Energy Lost:}\\
+Between Ellipse 1 and Ellipse 2:\\
+
+Area of ellipse 1 (A1) = 2.39$\pi$ units\\
+Area of ellipse 2 (A2) = 1.94$\pi$ units\\
+
+Now percentage decrease in area:
+\begin{equation*}
+\implies (\frac{A1-A2}{A1})*100
+\end{equation*}
+
+\begin{equation*}
+\implies (\frac{2.39\pi-1.94\pi}{2.39\pi})*100
+\end{equation*}
+
+\begin{equation*}
+\implies 18.82 \%
+\end{equation*}
+
+Between Ellipse 2 and Ellipse 3:\\
+
+Area of ellipse 2 (A2) = 1.94$\pi$ units\\
+Area of ellipse 3 (A3) = 1.52$\pi$ units\\
+
+Now percentage decrease in area:
+\begin{equation*}
+\implies (\frac{A2-A3}{A2})*100
+\end{equation*}
+
+\begin{equation*}
+\implies (\frac{1.94\pi-1.52\pi}{1.94\pi})*100
+\end{equation*}
+
+\begin{equation*}
+\implies 18.79 \%
+\end{equation*}
+
+\textbf{Observation:}
+The percentage decrease in area is almost equal for all the consecutive concentric ellipses.\\
+
+\textbf{4a}.
+I have taken \textbf{l1} and \textbf{l2} both equal to 1.00 units such that \textbf{L}=$\frac{l2}{l1}$ = 1 units\\
+
+The phase portraits and time series graphs are shown in next page.
+
+The value of \textbf{M} chosen by me is $\frac{1}{2}$ units for which I took \textbf{m1} as 2.00 units and \textbf{m2} as 2.00 units.\newpage
+
+\textbf{Phase Portrait:}\\
+Below shown is the phase portrait for the double pendulum w.r.t m1:
+\begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
+	\centering
+	\includegraphics[width=12cm, height=8cm]{Figures/M 4b l is 1.png} % Example image
+	\caption{Phase portrait for double pendulum (d$\theta_{1}$/dt vs $\theta_{1}$)}
+\end{figure}
+\\
+Below shown is the phase portrait for the double pendulum w.r.t m2:
+\begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
+	\centering
+	\includegraphics[width=12cm, height=8cm]{Figures/M 4b when l is 1.png} % Example image
+	\caption{Phase portrait for double pendulum (d$\theta_{2}$/dt vs $\theta_{2}$)}
+\end{figure}
+\newpage
+\textbf{Time Series:}\\
+Below shown is the Time series for the double pendulum w.r.t m1:
+\begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
+	\centering
+	\includegraphics[width=12cm, height=8cm]{Figures/M 4a angle 1 (1).png} % Example image
+	\caption{Time series for double pendulum ($\theta_{1}$ vs t)}
+\end{figure}
+
+Below shown is the Time series for the double pendulum w.r.t m2:
+\begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
+	\centering
+	\includegraphics[width=12cm, height=8cm]{Figures/M 4a angle 2.png} % Example image
+	\caption{Time series for double pendulum ($\theta_{2}$ vs t)}
+\end{figure}
+
+
+\newpage
+\textbf{4b}.
+\textbf{M} is kept constant at 0.50 units by keeping \textbf{m1} = 2.00 units and \textbf{m2} = 2.00 units as well.\\
+
+The value of \textbf{L} chosen by me is 0.50 units by keeping \textbf{l2} = 1.000 units and \textbf{l1} = 1.000 units
+
+\textbf{Phase Portrait:}\\
+Below shown is the phase portrait for the double pendulum w.r.t m1:
+\begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
+	\centering
+	\includegraphics[width=12cm, height=8cm]{Figures/M 4b less than 1.png} % Example image
+	\caption{Phase portrait for double pendulum (d$\theta_{1}$/dt vs $\theta_{1}$)}
+\end{figure}
+\\
+Below shown is the phase portrait for the double pendulum w.r.t m2:
+\begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
+	\centering
+	\includegraphics[width=12cm, height=8cm]{Figures/M 4b less than 1 (2).png} % Example image
+	\caption{Phase portrait for double pendulum (d$\theta_{2}$/dt vs $\theta_{2}$)}
+\end{figure}
+\newpage
+\textbf{Time Series:}\\
+Below shown is the Time series for the double pendulum w.r.t m1:
+\begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
+	\centering
+	\includegraphics[width=12cm, height=8cm]{Figures/M 4b angle 1.png} % Example image
+	\caption{Time series for double pendulum ($\theta_{1}$ vs t)}
+\end{figure}
+
+Below shown is the Time series for the double pendulum w.r.t m2:
+\begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
+	\centering
+	\includegraphics[width=12cm, height=8cm]{Figures/M 4b angle 2.png} % Example image
+	\caption{Time series for double pendulum ($\theta_{2}$ vs t)}
+\end{figure}
 
 \newpage
 \subsection{Anshul Jindal(IMT2020039)}
@@ -235,7 +359,6 @@ Phase Portrait of the desired experiment is:
 	\caption {Representative phase portrait for your smartphone-pendulum}
 \end{figure}
 
-\\
 \textbf{2c}.
 Time series of the desired experiment is:
 \begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
@@ -259,7 +382,6 @@ length of major axis (a) = 2.54 units\\
 length of minor axis (b) = 0.87 units\\
 
 So area will be (A) = $\pi$ab \implies 2.54*0.87*$\pi$ \implies 2.21$\pi$ units\\
-
 \textbf{$2^{nd}$ Ellipse - }\\
 length of major axis (a) = 2.22 units\\
 length of minor axis (b) = 0.76 units\\
