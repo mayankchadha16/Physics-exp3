@@ -18,7 +18,7 @@
 %----------------------------------------------------------------------------------------
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
-
+\DeclareUnicodeCharacter{2212}{-}
 \documentclass[11pt]{scrartcl} % Font size
 
 \input{structure.tex} % Include the file specifying the document structure and custom commands
@@ -70,7 +70,7 @@
 
 %------------------------------------------------
 \section{Aim of Experiment}
-1. To study the equation $x_{n+1} =$ r$x_n(1−x_n)$ and to see how it varies with r.\par
+1. To study the equation $x_{n+1} =$ r$x_n$(1 − $x_n$) and to see how it varies with r.\par
 2.  To plot “orbit diagram” or “bifurcation diagram”. \par
 3. To calculate Feigenbaum constant.  \par
 
@@ -171,35 +171,22 @@ L \theta_{2}^{\prime \prime}+\theta_{1}^{\prime \prime} \cos \left(\theta_{1}-\t
 \newpage
 
 \section{Observation and Calculation}
-\textbf{Q1} Common Code for the group:
-\begin{lstlisting}[language=Python, caption= Code for plotting X_n vs n graph for a given r]
+\textbf{Q1} - Common Code for the group :\par
+\underline{NOTE}: We take r as input.\par
+\begin{lstlisting}[language=Python, caption= Code for plotting $X_n$ vs n graph for a given r]
 import matplotlib.pyplot as plt
 import numpy as np
-
-# l=[]
-# l.append(0.1)
-# r = int(input())
-# for x in range (0,400,1): 
-#     l.append(r*l[x]*(1-l[x]))
-#     plt.plot(x,l[x])
-# plt.show()
-
 n = []
 x_limit=150
 for i in range (x_limit):
     n.append(i)
-
 y = []
 y.append(0.1)
 k = 0.1
-
 r = float(input())
-
 for i in range (x_limit-1):
     k = r * k * (1 - k)
     y.append(k)
-
-
 plt.xlabel("n")
 plt.ylabel("$X_n$")
 plt.title("r="+str(r))
