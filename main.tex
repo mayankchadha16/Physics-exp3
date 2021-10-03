@@ -85,73 +85,48 @@
 \section{Theory}
 
 
-\subsection{Acceleration Due to Gravity for Single Pendulum(g)}
+\subsection{Logistic Map}
+Logistic map is basically a mathematical relation of degree 2 which resembles simple \textbf{non-linear} dynamical equations. We will build a population growth model using it. Maps stands with the terminology of discrete systems which can be describes as a set of difference equations.\par
 
-We will use the Phyphox app and our mobile as a solid object tied with a string and hung like a pendulum, and the g shown shall be reported. Instead of mobile, we can also use any solid object (such as a stone ). In this case, we will note down the period of our oscillation and the length of the string. After that, to calculate g, we will use a well-known relation between the period of simple pendulum and g: \par
+Logistic map is written as:
 
-\begin{align} 
-	\begin{split}
-		T = 2\pi\sqrt{\frac{L}{g}}\\
-	\end{split}					
-\end{align}
-
-Rearranging the terms, we get:
-\begin{align} 
-	\begin{split}
-		g = \frac{4\pi^2L}{T^2}\\
-	\end{split}					
-\end{align}
-
-where\\ g = acceleration due to gravity.\\ T= Time period of simple pendulum.\\ L= Length of string. \par
-
-%------------------------------------------------
-
-\subsection{Phase Portraits}
-Phase portrait is the graph between..... $\theta$ For a simple pendulum with small amplitude(i.e. $\sin\theta \approx \theta$), phase portrait is generally an \textbf{ellipse} in an ideal case. As we increase the amplitude of the pendulum ($\theta$), we will observe the increase in length of both major and minor axis of the ellipse. \\
-In the presence of viscous forces such as drag, then we observe phase portrait as concentric ellipses. In this case, we can quantify energy lost per cycle in the decrease in the area of 2 consecutive concentric ellipses (percentage decrease).
-
-Formula for the \textbf{area(A)} of the ellipse with major axis as \textbf{a} and minor axis as \textbf{b} is:
-\begin{align} 
-	\begin{split}
-		A = \pi ab \nonumber\\
-	\end{split}					
-\end{align}
-
-\subsubsection{Liouville's Theorem}
-For Non-Dissipative systems, the average phase space traversed is conserved.
-
-%------------------------------------------------
-\subsection{Time Series}
-Time Series is the graph between... For non-dissipative systems, the amplitude remains constant throughout, and no energy is lost, whereas, for dissipative systems, amplitude keeps on decreasing with time, and energy also decreases along.
-
-\subsection{Double Pendulum}
-Lagrangian equation for double pendulum is as follows:
 \begin{equation}
-\left(m_{1}+m_{2}\right) L_{1}^{2} \theta_{1}^{\prime \prime}+m_{2} L_{1} L_{2} \theta_{2}^{\prime \prime} \cos \left(\theta_{1}-\theta_{2}\right)+m_{2} L_{1} L_{2} \theta_{1}^{\prime} \theta_{2}^{\prime} \sin \left(\theta_{1}-\theta_{2}\right)+g L_{1} \sin \theta_{1}\left(m_{1}+m_{2}\right)=0
+X_{n+1}=r X_{n}\left(1-X_{n}\right)
 \end{equation}
-and
-\begin{equation}
-m_{2} L_{2}^{2} \theta_{2}^{\prime \prime}+m_{2} L_{1} L_{2} \theta_{1}^{\prime \prime} \cos \left(\theta_{1}-\theta_{2}\right)-m_{2} L_{4} L_{2} \theta_{1}^{\prime 2} \sin \left(\theta_{1}-\theta_{2}\right)+g m_{2} L_{2} \sin \theta_{2}=0
-\end{equation}
-\\
-After Nondimensionalization, i.e substituting in the above equations as follows:
+
+Where:\par
+\textbf{$X_{n}$} - It is the  entity that represents ratio of existing population to the maximum possible population.\par
+\textbf{r} - It is the intrinsic growth rate. It depends on how population is being modelled. \par
+ 
+It can be easily observed that:
 \begin{equation*}
-M=\frac{m_{2}}{m_{1}+m_{2}} \hspace{1cm} \mbox{and} \hspace{1cm} L=\frac{l_{2}}{l_{1}}
+0 \leq X_{n} \leq 1
 \end{equation*}
 
-We get:
+And if we plot the graph between $X_{n+1}$ and $X_{n}$, we will get a parabola. It will be maximum when $X_{n}$ = $\frac{1}{2}$ which happens when r = $\frac{1}{4}$.
+
+Thus we also get:
+\begin{equation*}
+0 \leq r \leq 4
+\end{equation*}
+ 
+ 
+ \subsubsection{Assumptions}
+ 1. Population after the end of the next generation is directly proportional to the population at the end of current generation.\\
+ 2. Rate of population growth is proportional to size of population.\\
+ 3. If population very large -> sources consumed, so next generation dies out.
+
+\subsection{Bifurcation Diagram}
+A bifurcation is an abrupt change in the qualitative behavior of a system. Bifurcation Diagram is also called \textbf{Orbital Diagram}. It is basically a plot between X and r (i.e we will increase r from 0 to 4 and observe for all X we get).
+
+\subsection{Feigenbaum Constant}
+
+It is defined as:
 \begin{equation}
-\theta_{1}^{\prime \prime}+M L \theta_{2}^{\prime \prime} \cos \left(\theta_{1}-\theta_{2}\right)+M L \theta_{1}^{\prime} \theta_{2}^{\prime} \sin \left(\theta_{1}-\theta_{2}\right)+\omega^{2} \sin \theta_{1}=0
-\end{equation}
-and
-\begin{equation}
-L \theta_{2}^{\prime \prime}+\theta_{1}^{\prime \prime} \cos \left(\theta_{1}-\theta_{2}\right)-\theta_{1}^{\prime 2} \sin \left(\theta_{1}-\theta_{2}\right)+\omega^{2} \sin \theta_{2}=0
-\end{equation}
-%-----------------MAYANK CHADHA WRITE ALL EQUATIONS HERE_______________________%
+\delta=\lim _{n \rightarrow \infty} \frac{r_{n}-r_{n-1}}{r_{n+1}-r_{n}}
+\end{equation}\par
 
-
-
-
+The above mentioned result is approximately equal to 4.669.....
 \section{Sources of Error}
 \begin{enumerate}
 	\item Air Resistance
@@ -190,7 +165,7 @@ for i in range (x_limit-1):
 plt.xlabel("n")
 plt.ylabel("$X_n$")
 plt.title("r="+str(r))
-plt.plot(n, y)#,c='g')
+plt.plot(n, y)
 plt.show() 
 \end{lstlisting}
 \newpage
@@ -206,7 +181,7 @@ plt.show()
 \begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
 	\centering
 	\includegraphics[width=12cm, height=8cm]{anshul_bsdk.png} % Example image
-	\caption {Plot for $x_n$ vs n graph for r= 3.853045}
+	\caption {Plot for $x_n$ vs n graph for r= 3.853039}
 \end{figure}
 \newpage
 \subsection{Rahul Jain (IMT2020117)}
