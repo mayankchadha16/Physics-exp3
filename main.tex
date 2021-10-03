@@ -191,7 +191,6 @@ plt.show()
 	\includegraphics[width=12cm, height=8cm]{Rahul_singer.png} % Example image
 	\caption {Plot for $x_n$ vs n graph for r= 3.853117}
 \end{figure}
-\newpage
 \subsection{Karanjit Saha (IMT2020003)}
 \textbf{Q2}.
 \begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
@@ -207,7 +206,6 @@ plt.show()
 	\includegraphics[width=12cm, height=8cm]{chinmay69.png} % Example image
 	\caption {Plot for $x_n$ vs n graph for r= 3.853069}
 \end{figure}
-\newpage
 \subsection{Shashank Shekhar (IMT2020112)}
 \textbf{Q2}.
 \begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
@@ -215,4 +213,49 @@ plt.show()
 	\includegraphics[width=12cm, height=8cm]{shashank.png} % Example image
 	\caption {Plot for $x_n$ vs n graph for r= 3.853112}
 \end{figure}
+\newpage
+\textbf{Q3(a)} - Common Code for the group :\par
+\begin{lstlisting}[language=Python, caption= Code for plotting $X_n$ vs n graph for a given r]
+import numpy as np
+P=np.linspace(1,4,10000)
+m=0.7
+X = []
+Y = []
+for u in P:
+    X.append(u)
+    m = np.random.random()#starting with a random value of m.
+    for n in range(1001):
+      m=(u*m)*(1-m)
+    for l in range(1051):
+      m=(u*m)*(1-m)
+    Y.append(m)
+plt.xlabel("r")
+plt.ylabel("x")
+plt.plot(X, Y, ls='', marker=',')
+plt.show()
+\end{lstlisting}
+\textbf{Q4} - Common Code for the group :\par
+\begin{lstlisting}[language=Python, caption= Code for plotting $X_n$ vs n graph for a given r]
+print ('Feigenbaum constant calculation:')
+maximum_i = 16
+maximum_j = 40
+a1 = 1.0
+a2 = 0.0
+d1 = 3.2
+print( 'iterations ', 'Feigenbaum constant')
+for i in range(2, maximum_i):
+    a = a1 + (a1 - a2) / d1
+    for j in range(maximum_j):
+        x = 0
+        y = 0
+        for k in range(2 ** i):
+            y = 1 - 2 * y * x
+            x = a - x * x    
+        a = a - x / y
+    d = (a1 - a2) / (a - a1)
+    print ( i,"  ", d)
+    d1 = d
+    a2 = a1
+    a1 = a
+\end{lstlisting}
 \end{document}
