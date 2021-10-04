@@ -308,7 +308,7 @@ for i in range (x_limit):
 y = []
 y.append(0.1)
 k = 0.1
-r = double(input())
+r = float(input())
 for i in range (x_limit-1):
     k = r * k * (1 - k)
     y.append(k)
@@ -349,24 +349,21 @@ plt.show()
 \subsection{Chinmay Parekh (IMT2020069)}
 \textbf{Q1} -
 \begin{lstlisting}[language=Python, caption= Code for plotting $X_n$ vs n graph for a given r]
-import matplotlib.pyplot as plt
+import matplotlib .pyplot as plt
 import numpy as np
-n = []
-x_limit=150
-for i in range (x_limit):
-    n.append(i)
+n = np.arange(0, 100, 1)
 y = []
 y.append(0.1)
 k = 0.1
-r = float(input())
-for i in range (x_limit-1):
-    k = r * k * (1 - k)
+r = 3.54409
+for i in range(99):
+    k = r*k*(1-k)
     y.append(k)
 plt.xlabel("n")
-plt.ylabel("$X_n$")
-plt.title("r="+str(r))
+plt.ylabel("$X_n")
+plt.title("r = 3.54409")
 plt.plot(n, y)
-plt.show() 
+plt.show()
 \end{lstlisting}
 \textbf{Q2}.
 \begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
@@ -377,22 +374,17 @@ plt.show()
 \newpage
 \textbf{Q3(a)} -
 \begin{lstlisting}[language=Python, caption= Bifurcation diagram]
+import matplotlib . pyplot as plt
 import numpy as np
-P=np.linspace(1,4,10000)
-m=0.7
-X = []
-Y = []
-for u in P:
-    X.append(u)
-    m = np.random.random()#starting with a random value of m.
-    for n in range(1001):
-      m=(u*m)*(1-m)
-    for l in range(1051):
-      m=(u*m)*(1-m)
-    Y.append(m)
-plt.xlabel("r")
-plt.ylabel("x")
-plt.plot(X, Y, ls='', marker=',')
+r = np.linspace(1, 4, 1000)
+lst = []
+for i in r:
+    x = []
+    x.append(0.1)
+    for j in range(1, 600, 1):
+        x.append(i*x[j-1]*(1-x[j-1]))
+    lst.append([x[n] for n in range(300, 600, 1)])
+plt.plot(r, lst, ls='', color='#1E90FF', marker=',')
 plt.show()
 \end{lstlisting}
 \newpage
