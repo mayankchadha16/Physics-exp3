@@ -146,8 +146,9 @@ The above mentioned result is approximately equal to 4.669.....
 \newpage
 
 \section{Observation and Calculation}
-\textbf{Q1} - Common Code for the group :\par
-\underline{NOTE}: We take r as input.\par
+
+\subsection{Mayank Chadha(IMT2020045)}
+\textbf{Q1} -
 \begin{lstlisting}[language=Python, caption= Code for plotting $X_n$ vs n graph for a given r]
 import matplotlib.pyplot as plt
 import numpy as np
@@ -168,53 +169,14 @@ plt.title("r="+str(r))
 plt.plot(n, y)
 plt.show() 
 \end{lstlisting}
-\newpage
-\subsection{Mayank Chadha(IMT2020045)}
 \textbf{Q2}.
 \begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
 	\centering
 	\includegraphics[width=12cm, height=8cm]{Mayank.png} % Example image
 	\caption {Plot for $x_n$ vs n graph for r= 3.853045}
 \end{figure}
-\subsection{Anshul Jindal(IMT2020039)}
-\textbf{Q2}.
-\begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
-	\centering
-	\includegraphics[width=12cm, height=8cm]{anshul_bsdk.png} % Example image
-	\caption {Plot for $x_n$ vs n graph for r= 3.853039}
-\end{figure}
 \newpage
-\subsection{Rahul Jain (IMT2020117)}
-\textbf{Q2}.
-\begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
-	\centering
-	\includegraphics[width=12cm, height=8cm]{Rahul_singer.png} % Example image
-	\caption {Plot for $x_n$ vs n graph for r= 3.853117}
-\end{figure}
-\subsection{Karanjit Saha (IMT2020003)}
-\textbf{Q2}.
-\begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
-	\centering
-	\includegraphics[width=12cm, height=8cm]{Karanjit.png} % Example image
-	\caption {Plot for $x_n$ vs n graph for r= 3.853003}
-\end{figure}
-\newpage
-\subsection{Chinmay Parekh (IMT2020069)}
-\textbf{Q2}.
-\begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
-	\centering
-	\includegraphics[width=12cm, height=8cm]{chinmay69.png} % Example image
-	\caption {Plot for $x_n$ vs n graph for r= 3.853069}
-\end{figure}
-\subsection{Shashank Shekhar (IMT2020112)}
-\textbf{Q2}.
-\begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
-	\centering
-	\includegraphics[width=12cm, height=8cm]{shashank.png} % Example image
-	\caption {Plot for $x_n$ vs n graph for r= 3.853112}
-\end{figure}
-\newpage
-\textbf{Q3(a)} - Common Code for the group :\par
+\textbf{Q3(a)} -
 \begin{lstlisting}[language=Python, caption= Bifurcation diagram]
 import numpy as np
 P=np.linspace(1,4,10000)
@@ -234,6 +196,256 @@ plt.ylabel("x")
 plt.plot(X, Y, ls='', marker=',')
 plt.show()
 \end{lstlisting}
+\newpage
+\subsection{Anshul Jindal(IMT2020039)}
+\textbf{Q1} -
+\begin{lstlisting}[language=Python, caption= Code for plotting $X_n$ vs n graph for a given r]
+import matplotlib.pyplot as plt
+import numpy as np
+n = []
+x_limit=150
+for i in range (x_limit):
+    n.append(i)
+y = []
+y.append(0.1)
+k = 0.1
+r = float(input())
+for i in range (x_limit-1):
+    k = r * k * (1 - k)
+    y.append(k)
+plt.xlabel("n")
+plt.ylabel("$X_n$")
+plt.title("r="+str(r))
+plt.plot(n, y)
+plt.show() 
+\end{lstlisting}
+\textbf{Q2}.
+\begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
+	\centering
+	\includegraphics[width=12cm, height=8cm]{anshul_bsdk.png} % Example image
+	\caption {Plot for $x_n$ vs n graph for r= 3.853039}
+\end{figure}
+\newpage
+\textbf{Q3(a)} -
+\begin{lstlisting}[language=Python, caption= Bifurcation diagram]
+import numpy as np
+P=np.linspace(1,4,10000)
+m=0.7
+X = []
+Y = []
+for u in P:
+    X.append(u)
+    m = np.random.random()#starting with a random value of m.
+    for n in range(1001):
+      m=(u*m)*(1-m)
+    for l in range(1051):
+      m=(u*m)*(1-m)
+    Y.append(m)
+plt.xlabel("r")
+plt.ylabel("x")
+plt.plot(X, Y, ls='', marker=',')
+plt.show()
+\end{lstlisting}
+\newpage
+\subsection{Rahul Jain (IMT2020117)}
+\textbf{Q1} -
+\begin{lstlisting}[language=Python, caption= Code for plotting $X_n$ vs n graph for a given r]
+import matplotlib.pyplot as plt
+import numpy as np
+n = []
+x_limit=150
+for i in range (x_limit):
+    n.append(i)
+y = []
+y.append(0.1)
+k = 0.1
+r = float(input())
+for i in range (x_limit-1):
+    k = r * k * (1 - k)
+    y.append(k)
+plt.xlabel("n")
+plt.ylabel("$X_n$")
+plt.title("r="+str(r))
+plt.plot(n, y)
+plt.show() 
+\end{lstlisting}
+\textbf{Q2}.
+\begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
+	\centering
+	\includegraphics[width=12cm, height=8cm]{Rahul_singer.png} % Example image
+	\caption {Plot for $x_n$ vs n graph for r= 3.853117}
+\end{figure}
+\newpage
+\textbf{Q3(a)} -
+\begin{lstlisting}[language=Python, caption= Bifurcation diagram]
+import numpy as np
+P=np.linspace(1,4,10000)
+m=0.7
+X = []
+Y = []
+for u in P:
+    X.append(u)
+    m = np.random.random()#starting with a random value of m.
+    for n in range(1001):
+      m=(u*m)*(1-m)
+    for l in range(1051):
+      m=(u*m)*(1-m)
+    Y.append(m)
+plt.xlabel("r")
+plt.ylabel("x")
+plt.plot(X, Y, ls='', marker=',')
+plt.show()
+\end{lstlisting}
+\newpage
+\subsection{Karanjit Saha (IMT2020003)}
+\textbf{Q1} -
+\begin{lstlisting}[language=Python, caption= Code for plotting $X_n$ vs n graph for a given r]
+import matplotlib.pyplot as plt
+import numpy as np
+n = []
+x_limit=150
+for i in range (x_limit):
+    n.append(i)
+y = []
+y.append(0.1)
+k = 0.1
+r = float(input())
+for i in range (x_limit-1):
+    k = r * k * (1 - k)
+    y.append(k)
+plt.xlabel("n")
+plt.ylabel("$X_n$")
+plt.title("r="+str(r))
+plt.plot(n, y)
+plt.show() 
+\end{lstlisting}
+\textbf{Q2}.
+\begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
+	\centering
+	\includegraphics[width=12cm, height=8cm]{Karanjit.png} % Example image
+	\caption {Plot for $x_n$ vs n graph for r= 3.853003}
+\end{figure}
+\newpage
+\textbf{Q3(a)} -
+\begin{lstlisting}[language=Python, caption= Bifurcation diagram]
+import numpy as np
+P=np.linspace(1,4,10000)
+m=0.7
+X = []
+Y = []
+for u in P:
+    X.append(u)
+    m = np.random.random()#starting with a random value of m.
+    for n in range(1001):
+      m=(u*m)*(1-m)
+    for l in range(1051):
+      m=(u*m)*(1-m)
+    Y.append(m)
+plt.xlabel("r")
+plt.ylabel("x")
+plt.plot(X, Y, ls='', marker=',')
+plt.show()
+\end{lstlisting}
+\newpage
+\subsection{Chinmay Parekh (IMT2020069)}
+\textbf{Q1} -
+\begin{lstlisting}[language=Python, caption= Code for plotting $X_n$ vs n graph for a given r]
+import matplotlib.pyplot as plt
+import numpy as np
+n = []
+x_limit=150
+for i in range (x_limit):
+    n.append(i)
+y = []
+y.append(0.1)
+k = 0.1
+r = float(input())
+for i in range (x_limit-1):
+    k = r * k * (1 - k)
+    y.append(k)
+plt.xlabel("n")
+plt.ylabel("$X_n$")
+plt.title("r="+str(r))
+plt.plot(n, y)
+plt.show() 
+\end{lstlisting}
+\textbf{Q2}.
+\begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
+	\centering
+	\includegraphics[width=12cm, height=8cm]{chinmay69.png} % Example image
+	\caption {Plot for $x_n$ vs n graph for r= 3.853069}
+\end{figure}
+\newpage
+\textbf{Q3(a)} -
+\begin{lstlisting}[language=Python, caption= Bifurcation diagram]
+import numpy as np
+P=np.linspace(1,4,10000)
+m=0.7
+X = []
+Y = []
+for u in P:
+    X.append(u)
+    m = np.random.random()#starting with a random value of m.
+    for n in range(1001):
+      m=(u*m)*(1-m)
+    for l in range(1051):
+      m=(u*m)*(1-m)
+    Y.append(m)
+plt.xlabel("r")
+plt.ylabel("x")
+plt.plot(X, Y, ls='', marker=',')
+plt.show()
+\end{lstlisting}
+\newpage
+\subsection{Shashank Shekhar (IMT2020112)}
+\textbf{Q1} -
+\begin{lstlisting}[language=Python, caption= Code for plotting $X_n$ vs n graph for a given r]
+import matplotlib.pyplot as plt
+import numpy as np
+r = float(input())
+a = []
+b = []
+for i in range(150):
+    a.append(i)
+b.append(0.1)
+z = 0.1
+for i in range(149):
+    z = r * z * (1-z)
+    b.append(z)
+plt.ylabel("$X_n")
+plt.xlabel("n")
+plt.title("r="+str(r))
+plt.plot(a, b)
+plt.show()
+\end{lstlisting}
+\textbf{Q2}.
+\begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
+	\centering
+	\includegraphics[width=12cm, height=8cm]{shashank.png} % Example image
+	\caption {Plot for $x_n$ vs n graph for r= 3.853112}
+\end{figure}
+\newpage
+\textbf{Q3(a)} -
+\begin{lstlisting}[language=Python, caption= Bifurcation diagram]
+import numpy as np
+P=np.linspace(1,4,10000)
+m=0.7
+X = []
+Y = []
+for u in P:
+    X.append(u)
+    m = np.random.random()#starting with a random value of m.
+    for n in range(1001):
+      m=(u*m)*(1-m)
+    for l in range(1051):
+      m=(u*m)*(1-m)
+    Y.append(m)
+plt.xlabel("r")
+plt.ylabel("x")
+plt.plot(X, Y, ls='', marker=',')
+plt.show()
+\end{lstlisting}
+\newpage
 \textbf{Q4} - Common Code for the group :\par
 \begin{lstlisting}[language=Python, caption= Feigenbaum constants]
 print ('Feigenbaum constant calculation:')
