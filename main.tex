@@ -301,23 +301,22 @@ plt.show()
 \textbf{Q1} -
 \begin{lstlisting}[language=Python, caption= Code for plotting $X_n$ vs n graph for a given r]
 import matplotlib.pyplot as plt
-import numpy as np
-n = []
+x = []
 x_limit=150
 for i in range (x_limit):
-    n.append(i)
+    x.append(i)
 y = []
 y.append(0.1)
 k = 0.1
-r = float(input())
+r = double(input())
 for i in range (x_limit-1):
     k = r * k * (1 - k)
     y.append(k)
 plt.xlabel("n")
 plt.ylabel("$X_n$")
 plt.title("r="+str(r))
-plt.plot(n, y)
-plt.show() 
+plt.plot(x, y)
+plt.show()
 \end{lstlisting}
 \textbf{Q2}.
 \begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
